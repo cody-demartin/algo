@@ -46,4 +46,10 @@
 #       A) Solve the inequality of n < 8lg(n)
 #           -> Something I just learned is log = base 10, lg = base 2
 #           -> Manipulate the inequality to lg(n) / n >= 1/8 which returns an answer of 43 (idk how tho)
+#
+# Problems
+# 1-1 Comparison of running times
+#     For each function f(n) and time t in the following table, determine the largest size n of a problem that can be solved in time t,
+#     assuming that the algorithm to solve the problem takes f(n) microseconds. 
+
 
