@@ -55,30 +55,30 @@ end
 
 # class Array
 #     def linear_search(targeted_values)
-#         i = 0
-#         while i < self.length
+#        i = 0
+#        while i < self.length
 #             if self[i] == targeted_values
 #                 return i
 #             end
 #         i += 1
-#         end
-#     nil
+#        end
+#        nil
 #     end
 # end
 #  
 # 
-#       Proof: to come ending here for tonight, tomorrow we learn proofs.
-# 
-# 
-# 
-# 
-# 
-# 
-# 
-# 
-# 
-# 
-# 
+#       Proof: 
+#           Initialization:
+#               Before the loop even runs the first time, we can evaluate that for any given array, that array will we will be initializing
+#               with the first element of that array, and comparing it to a given value. When the first element is equal to 1 for instance,
+#               and the value is equal to 2, the loop would continue on to the next element in the array. If the next element was two, it 
+#               would return the index where that value is found. 
+#           Maintanence: 
+#               The loop works by checking each indvidual index of an array, then moving on to the nect one, left-to-right. If no match is 
+#               found the iterator gets incremented and the loop gets re-ran.
+#           Termination:
+#               The base case for this algorithm is when the values are equal. When they are equal, a value is explictly returned and you 
+#               the function escapes. Also, if i reaches a value greater than the array's length, the program will simply return nil. 
 # 
 # 
 # 
