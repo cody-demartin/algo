@@ -6,7 +6,7 @@ const first = (s) => {
     // add the letters to the new map
     for (const letter of s) {
 
-        // make a new set using the map, using letter as what you're passing in, if it exists add 1, if it doesn't set it to one
+        // make new key value pairs using the set, using letter as what you're passing in, if it exists add 1, if it doesn't set it to one
         map.set(letter, map.get(letter) + 1 || 1);
     }
 
@@ -29,5 +29,8 @@ const first = (s) => {
     return -1
 }
 
+
 // set notes because I still don't know what a set is:
 
+// set is a prototype function of map. first paramter is the value you are setting, second is the key. 
+// map also has .get method, where you pass a parameter and it looks for that value in the keys array
