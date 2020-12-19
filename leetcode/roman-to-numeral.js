@@ -22,3 +22,7 @@ const romanToInt = (s) => {
 
 
 }
+
+// something I have noticed about "next to" problems in arrays, usually using splice or setting values to remove 
+// those values etc like the north south one. 
+
