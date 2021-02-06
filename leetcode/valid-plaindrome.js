@@ -23,3 +23,4 @@ const isPalindrome = str => {
     // return true if no cases return false
     return true
 }
+
