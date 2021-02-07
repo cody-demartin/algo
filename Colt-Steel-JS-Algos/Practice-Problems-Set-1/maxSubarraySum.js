@@ -22,7 +22,8 @@
 // iteration we would check the difference between 1 - -1 (or 1 + 1), then add that the total. The answer we are 
 // left with is 3, which is the maximum sum of an array with n = 2 for this particular array. 
 
-const maxSubArraySum = (array, size) => {
+const maxSubarraySum = (array, size) => {
+    if (array.length < size) return null
 
     // initialize a variable with an integer type to act as a counter for the first initial sum
     let total = 0;
@@ -43,7 +44,8 @@ const maxSubArraySum = (array, size) => {
     }
 
     console.log(total)
+    return total
 }
 
-maxSubArraySum([1, -1, 2, 1, 5], 3)
+maxSubarraySum([1, -1, 2, 1, 5], 3)
 // 8
