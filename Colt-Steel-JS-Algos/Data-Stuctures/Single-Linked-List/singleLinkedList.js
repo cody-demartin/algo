@@ -43,13 +43,30 @@ class SinglyLinkedList{
         }
         return current
     }
-    // traverse(){
-    //     let current = this.head;
-    //     while(current){
-    //         console.log(current.val);
-    //         current = current.next;
-    //     }
-    // }
+    shift(){
+        if(!this.head) return undefined
+
+        let currentHead = this.head;
+        this.head = currentHead.next;
+        this.length--;
+        if(this.length === 0){
+            this.tail = null;
+        }
+        return currentHead
+    }
+    unshift(val){
+        let node = new Node(val);
+        if(!this.head){
+            this.head = node;
+            this.tail = this.head;
+        }
+        else{
+            node.next = this.head;
+            this.head = node;
+        }
+        this.length++;
+        return this
+    }
 }
 
 let first = new Node("Hi");
