@@ -1,3 +1,4 @@
+
 class Node{
     constructor(val) {
         this.val = val;
@@ -67,7 +68,51 @@ class SinglyLinkedList{
         this.length++;
         return this
     }
+    get(index){
+        if (index < 0 || index >= this.length) return undefined
+        let counter = 0;
+        let node = this.head;
+        while (counter !== index) {
+            node = node.next
+            counter++;
+        }
+        return node
+    }
+    set(index, value){
+        let node = this.get(index);
+        if(node){
+            node.val = value;
+            return true
+        }
+        return false
+    }
+    insert(index, value){
+        if (index < 0 || index > this.length) return false;
+        if (index === this.length) !!this.push(value);
+        if (index === 0) !!this.unshift(value);
+        let newNode = new Node(value)
+        let node = this.get(index - 1);
+        let oldNode = node.next;
+        node.next = newNode;
+        newNode.next = oldNode;
+        this.length++
+        return true
+    }
+    remove(index){
+        if(index < 0 || index > this.length) return undefined
+        if(index === this.length - 1) this.pop();
+        if(index === 0) this.shift();
+
+        let node = this.get(index - 1);
+        let removedNode = node.next;
+        node.next = removedNode.next;
+        this.length--
+        return removedNode
+    }
+
 }
+
+
 
 let first = new Node("Hi");
 first.next = new Node("there");
