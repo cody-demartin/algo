@@ -138,3 +138,12 @@ list.push(23)
 list.push(47)
 
 
+// Big O notation of common operations of Singly Linked Lists
+// O(N) for removal when looking at end, O(1) for beginning
+// O(N) for searching
+// O(N) for accessing
+// O(1) for insertion
+// Singly linked lists excel at insertion and deletion vs arrays
+// Foundation for stacks/queues 
+
+
