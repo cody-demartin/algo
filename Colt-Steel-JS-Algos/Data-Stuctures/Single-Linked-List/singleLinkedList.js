@@ -99,17 +99,31 @@ class SinglyLinkedList{
         return true
     }
     remove(index){
-        if(index < 0 || index > this.length) return undefined
+        if(index < 0 || index >= this.length) return undefined
         if(index === this.length - 1) this.pop();
         if(index === 0) this.shift();
-
         let node = this.get(index - 1);
         let removedNode = node.next;
         node.next = removedNode.next;
         this.length--
         return removedNode
     }
+    reverse(){
+        let node = this.head;
+        this.head = this.tail;
+        this.tail = node;
+        let previous = null;
+        let next;
 
+        for (let i = 0; i <  this.length; i++) {
+            next = node.next;
+            node.next = previous; 
+            previous = node;
+            node = next;
+        }
+
+    return this
+    }
 }
 
 
