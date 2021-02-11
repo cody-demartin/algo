@@ -55,3 +55,5 @@ const binary = (sortedArray, value) => {
 
 // 16 elements = 4 steps to elimate all possible solutions if the element does not exist (so the very worst case)
 // 32 elements = 5 steps
+// Every time we double the items in the collections we increase the steps we need by one so 1 -> 1, 2 -> 2, 4 -> 3, 8, -> etc.
+
