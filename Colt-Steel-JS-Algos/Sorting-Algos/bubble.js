@@ -33,20 +33,27 @@
 // Before we sort, we must swap
 
 
-
+// optimized 
 const bubble = (array) => {
     const swap = (arr, index1, index2) => {
         [ arr[index1], arr[index2] ] = [ arr[index2], arr[index1] ]
     }
 
     for (let i = array.length; i > 0; i--) {
+        noSwaps = true;
         for (let j = 0; j < i - 1; j++) {
             if (array[j] > array[j + 1]) {
                 swap(array, j, j + 1)
+                noSwaps = false;
             }
         }
+        if(noSwaps) break;
     }
 
     console.table(array)
     return array 
 }
+
+// O(N^2) nested loop roughly making n comparisons n times
+// With optimized no swaps with a nearly sorted collection, more like O(2N)
+// Average case is O(n^2)
