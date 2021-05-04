@@ -100,6 +100,7 @@ class SinglyLinkedList{
         let node = this.get(index - 1);
         let oldNode = node.next;
         node.next = newNode;
+        
         newNode.next = oldNode;
         this.length++
         return true
