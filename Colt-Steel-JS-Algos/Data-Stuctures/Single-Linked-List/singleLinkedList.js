@@ -68,6 +68,8 @@ class SinglyLinkedList{
         this.length++;
         return this
     }
+
+
     get(index){
         if (index < 0 || index >= this.length) return undefined
         let counter = 0;
@@ -78,6 +80,8 @@ class SinglyLinkedList{
         }
         return node
     }
+
+
     set(index, value){
         let node = this.get(index);
         if(node){
@@ -86,6 +90,8 @@ class SinglyLinkedList{
         }
         return false
     }
+
+
     insert(index, value){
         if (index < 0 || index > this.length) return false;
         if (index === this.length) !!this.push(value);
@@ -98,6 +104,8 @@ class SinglyLinkedList{
         this.length++
         return true
     }
+
+    
     remove(index){
         if(index < 0 || index >= this.length) return undefined
         if(index === this.length - 1) this.pop();
@@ -108,22 +116,24 @@ class SinglyLinkedList{
         this.length--
         return removedNode
     }
+
+
     reverse(){
         let node = this.head;
         this.head = this.tail;
         this.tail = node;
         let previous = null;
         let next;
-
         for (let i = 0; i <  this.length; i++) {
             next = node.next;
             node.next = previous; 
             previous = node;
             node = next;
         }
-
     return this
     }
+
+
 }
 
 
